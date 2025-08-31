@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Conditional & Loop Practice</title>
+ <h2> Loop Control Practice</h2>
+
+  <button onclick="printWhile()">Print 1 to 10 (while loop)</button>
+  <button onclick="promptDoWhile()">Enter correct value (do-while)</button>
+  <button onclick="sumForLoop()">Sum of first N numbers</button>
+  <input type="number" id="nInput" placeholder="Enter N">
+  <button onclick="multiplicationTable()">Multiplication Table</button>
+  <input type="number" id="tableNum" placeholder="Enter a number">
+
+  <pre id="output2"></pre>
+
+  <script>
+    // Task 1: Conditional Statement Examples
+    function checkNumber() {
+      const num = parseInt(document.getElementById("numInput").value);
+      let result = '';
+  // Simple if
+      if (num > 0) result += "Positive number\n";
+      // if-else
+     if (num % 2 === 0) result += "Even number\n";
+      else result += "Odd number\n";
+
+      // else-if
+      if (num < 0) result += "Negative number\n";
+      else if (num === 0) result += "Zero\n";
+      else result += "Greater than zero\n";
+
+      document.getElementById("output1").textContent = result;
+    }
+
+    // Switch case for days
+    function showDay() {
+      const day = parseInt(document.getElementById("daySelector").value);
+      let name = '';
+      switch (day) {
+        case 1: name = "Monday"; break;
+        case 2: name = "Tuesday"; break;
+        case 3: name = "Wednesday"; break;
+        case 4: name = "Thursday"; break;
+        case 5: name = "Friday"; break;
+        case 6: name = "Saturday"; break;
+        case 7: name = "Sunday"; break;
+        default: name = "Invalid"; break;
+      }
+      document.getElementById("output1").textContent += "Selected Day: " + name + "\n";
+    }
+
+    // Task 2: Loop Examples
+
+    // while loop
+    function printWhile() {
+      let i = 1;
+      let output = 'Numbers from 1 to 10:\n';
+while (i <= 10) {
+        output += i + " ";
+        i++;
+      }
+      document.getElementById("output2").textContent = output;
+    }
+
+    // do-while loop
+    function promptDoWhile() {
+      let userInput;
+      let message = "";
+      do {
+        userInput = prompt("Enter a number greater than 10:");
+        if (userInput === null) return;
+        userInput = parseInt(userInput);
+        message += "You entered: " + userInput + "\n";
+      } while (userInput <= 10);
+
+      message += "Correct input!";
+      document.getElementById("output2").textContent = message;
+    }
+
+    // for loop
+    function sumForLoop() {
+      const n = parseInt(document.getElementById("nInput").value);
+      let sum = 0;
+      for (let i = 1; i <= n; i++) {
+        sum += i;
+      }
+      document.getElementById("output2").textContent = `Sum of first ${n} numbers: ${sum}`;
+    }
+
+    // nested for loop - multiplication table
+    function multiplicationTable() {
+      const num = parseInt(document.getElementById("tableNum").value);
+      let table = `Multiplication Table for ${num}:\n`;
+      for (let i = 1; i <= 10; i++) {
+        table += `${num} × ${i} = ${num * i}\n`;
+      }
+      document.getElementById("output2").textContent = table;
+    }
+  </script>
+</body>
+</html>
+
