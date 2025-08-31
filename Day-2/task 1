@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Conditional & Loop Practice</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    button, select, input { margin: 5px; padding: 5px; }
+    pre { background-color: #f4f4f4; padding: 10px; }
+  </style>
+</head>
+<body>
+
+  <h1> Conditional Statements</h1>
+
+  <label>Enter a number: </label>
+  <input type="number" id="numInput">
+  <button onclick="checkNumber()">Check</button>
+
+  <h4>Day of Week (Switch Example)</h4>
+  <select id="daySelector">
+    <option value="1">1 - Monday</option>
+    <option value="2">2 - Tuesday</option>
+    <option value="3">3 - Wednesday</option>
+    <option value="4">4 - Thursday</option>
+    <option value="5">5 - Friday</option>
+    <option value="6">6 - Saturday</option>
+    <option value="7">7 - Sunday</option>
+  </select>
+  <button onclick="showDay()">Show Day</button>
+
+  <pre id="output1"></pre>
+
+  </body>
+  </html>
