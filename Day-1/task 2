@@ -1,0 +1,19 @@
+let numberType = 100;             
+let stringType = "Hello";         
+let booleanType = true;           
+let nullType = null;              
+let undefinedType;                
+let objectType = { key: "value" } 
+let symbolType = Symbol("id");    
+
+
+let str = "123";
+let num = Number(str);      
+console.log("Converted to number:", num);
+
+let backToString = String(num); 
+console.log("Converted back to string:", backToString);
+
+
+console.log("5" + 2);       
+console.log("5" - 2);
