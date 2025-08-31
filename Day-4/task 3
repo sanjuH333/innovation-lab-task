@@ -1,0 +1,58 @@
+//Loops
+    console.log("\n--- Task 3: Loops ---");
+
+    console.log("Using forEach:");
+    fruits.forEach((fruit, index) => console.log(`${index}: ${fruit}`));
+
+    console.log("Using map to uppercase:");
+    let upperFruits = fruits.map(f => f.toUpperCase());
+    console.log(upperFruits);
+
+    console.log("Using for-in (indexes):");
+    for (let index in fruits) {
+      console.log(`Index ${index}: ${fruits[index]}`);
+    }
+
+    console.log("Using for-of (values):");
+    for (let fruit of fruits) {
+      console.log("Fruit:", fruit);
+    }
+
+    // Post-Class Assignment: Student Grades Processor
+    console.log("\n--- Post-Class: Student Grades Processor ---");
+
+    let students = [
+      { name: "alice", score: 84.6 },
+      { name: "bob", score: 42.3 },
+      { name: "charlie", score: 68.8 }
+    ];
+
+    // Round scores
+    students.forEach(student => student.score = Math.round(student.score));
+
+    // Capitalize names
+    students.forEach(student => {
+      student.name = student.name.charAt(0).toUpperCase() + student.name.slice(1);
+    });
+
+    // Print names & scores
+    console.log("Student Scores:");
+    students.forEach(s => console.log(`${s.name}: ${s.score}`));
+
+    // Pass/Fail status
+    let statuses = students.map(s => s.score >= 50 ? "Pass" : "Fail");
+    console.log("Pass/Fail Statuses:", statuses);
+
+    // Congratulatory message
+    for (let s of students) {
+      if (s.score > 75) {
+        console.log(`Congrats ${s.name}, excellent performance!`);
+      }
+    }
+  </script>
+</body>
+</html>
+
+
+
+task 1
