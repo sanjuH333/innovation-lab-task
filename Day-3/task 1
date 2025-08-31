@@ -1,0 +1,5 @@
+/Basic Functions
+function welcome() {
+  console.log("Welcome to Innovation Lab!");
+}
+welcome();
